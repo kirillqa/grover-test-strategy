@@ -1,0 +1,10 @@
+Test automation strategy for SPA application
+
+Test strategy should be defined for several parts. Each part should be finished with fully working solution.
+
+1.  Develop smoke scope of tests (tests should test core functionality of the website and test run duration should not be more that 15 min.) that should be run on main browsers
+2.  Set up continuous integration server (Configuring CI to run tests on it and send results through email/slack/hipchat) 
+3.  Run tests on CI after each commit of developer’s code
+4.  Extend automation tests to add test coverage
+5.  Run full scope of tests on CI on nightly basis because UI tests are really slow in comparison to unit tests
+6.  Create pipeline project on CI that will contain all stages from development process like the following: Deploy latest code to staging -> Run full regression automation test suite on staging -> If it pass -> Deploy changes to PROD -> Run smoke tests on producton to confirm that deploy was successfull
